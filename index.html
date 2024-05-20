@@ -1,0 +1,458 @@
+ 
+<html>
+ 
+<head>
+        <title>The Playbook</title>
+         
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    
+    
+
+ <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+ 
+ 
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+		<script src="booklet/jquery.easing.1.3.js" type="text/javascript"></script>
+		<script src="booklet/jquery.booklet.1.1.0.min.js" type="text/javascript"></script>
+
+		<link href="booklet/jquery.booklet.1.1.0.css" type="text/css" rel="stylesheet" media="screen" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+		 
+		 
+		 <style>
+         
+              *{
+	margin:0;
+	padding:0;
+}
+body{
+    background-image: url('https://img.freepik.com/free-vector/black-carbon-fiber-texture-pattern-background_1017-33436.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #444;
+    font-size: 12px;
+    font-family: 'Oswald', sans-serif;
+}
+
+ 
+.main-heading {
+            font-family: 'Poetsen One', cursive;
+            text-align: center;
+            margin-bottom: 0px;
+            font-size: 6rem;
+            color: #fff;
+        }
+ 
+.booklet           {
+	width:900px;
+	height:607px;
+	position:relative;
+	margin:0 auto 10px;
+	-moz-box-shadow:0px 0px 1px #fff;
+	-webkit-box-shadow:0px 0px 1px #fff;
+	box-shadow:0px 0px 1px #fff;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+}
+.booklet .b-wrap-left  {
+	background:#fff url(images/left_bg.jpg) no-repeat top left;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-topleft:10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+.booklet .b-wrap-right {
+	background:#fff url(images/right_bg.jpg) no-repeat top left;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.booklet .b-counter {
+	bottom:10px;
+	position:absolute;
+	display:block;
+	width:90%;
+	height:20px;
+	border-top:1px solid #fff;
+	color:#fff;
+	text-align:center;
+	font-size:12px;
+	padding:5px 0 0;
+	background:transparent;
+	-moz-box-shadow:0px -1px 1px #fff;
+	-webkit-box-shadow:0px -1px 1px #fff;
+	box-shadow:0px -1px 1px #fff;
+	opacity:0.8;
+}
+.book_wrapper{
+	margin:0 auto;
+	padding-top:50px;
+	width:905px;
+	height:540px;
+	position:relative;
+	background:transparent url(images/bg.png) no-repeat 9px 27px;
+}
+.book_wrapper h1{
+	color:orange;
+	margin:5px 5px 5px 15px;
+	font-size:24px;
+	background:transparent url(images/h1.png) no-repeat bottom left;
+	padding-bottom:7px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.book_wrapper p{
+	font-size:15px;
+	margin:5px 5px 5px 15px;
+}
+.book_wrapper a.article,
+.book_wrapper a.demo{
+	background:transparent url(images/circle.png) no-repeat 50% 0px;
+	display:block;
+	width:95px;
+	height:41px;
+	text-decoration:none;
+	outline:none;
+	font-size:16px;
+	color:#555;
+	float:left;
+	line-height:41px;
+	padding-left:47px;
+}
+.book_wrapper a.demo{
+	margin-left:50px;
+}
+.book_wrapper a.article:hover,
+.book_wrapper a.demo:hover{
+	background-position:50% -41px;
+	color:#13386a;
+}
+.book_wrapper img{
+	margin:10px 0px 5px 35px;
+	width:300px;
+	height:400px;
+	padding:4px;
+ }
+.booklet .b-wrap-right img{
+	border:px solid #E6E3C2;
+}
+a#next_page_button,
+a#prev_page_button{
+	display:none;
+	position:absolute;
+	width:41px;
+	height:40px;
+	cursor:pointer;
+	margin-top:-20px;
+	top:50%;
+	background:transparent url(images/buttons.png) no-repeat 0px -40px;
+}
+a#prev_page_button{
+	left:-30px;
+}
+a#next_page_button{
+	right:-30px;
+	background-position:-41px -40px;
+}
+a#next_page_button:hover{
+	background-position:-41px 0px;
+}
+a#prev_page_button:hover{
+	background-position:0px 0px;
+}
+ 
+.bottom-content {
+	max-width: 900px; /* Match the book container width */
+            margin: 50px auto 0; /* Center the content horizontally */
+            font-family: 'Poetsen One', cursive;
+            text-align: center;
+			color: #fff;
+}
+
+.bottom-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.transparent-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+	font-family: 'Poetsen One', cursive;
+    transition: all 0.3s ease;
+}
+
+.transparent-button:hover {
+    background-color: #ffffff;
+    color: #eba426;
+}
+
+#particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+
+}
+    
+
+         </style>
+		 
+    </head>
+    <body>
+		<div id="particles-js"></div>
+
+		<h1 class="main-heading">The Playbook 📖</h1>
+    <br><br><br><br><br>
+		 
+		<div class="book_wrapper">
+			<a id="next_page_button"></a>
+			<a id="prev_page_button"></a>
+			 
+			<div id="mybook" style="display:none;">
+				<div class="b-load">
+					<div>
+						<img src="https://media.discordapp.net/attachments/1147887838495522978/1242104002850717706/image.png?ex=664c9eff&is=664b4d7f&hm=c03ae9deba25aa26d404c8b6a18fd9f68bf499fc6fb879b58e1e775646f7c682&=&format=webp&quality=lossless&width=234&height=280" alt=""/>
+
+					</div>
+					<div>
+						<img src="https://cdn.discordapp.com/attachments/1147887838495522978/1242071424030605412/Group_8.png?ex=664c80a8&is=664b2f28&hm=6b64f435045ce4721f20d2c466b00f63a421f42178fac561562d82f779c21bee&" alt="" />
+					</div>
+					<div>
+						<img src="https://media.discordapp.net/attachments/1147887838495522978/1242094877681123398/image.png?ex=664c967f&is=664b44ff&hm=10a4baea253a46b10318790cf7bfbe32d7be0de94101fa4fbf70d7827021b438&=&format=webp&quality=lossless&width=364&height=435" alt="" />
+					</div>
+					<div>
+						<img src="https://media.discordapp.net/attachments/1147887838495522978/1242098117042507796/image.png?ex=664c9984&is=664b4804&hm=966945e4ba58f3b17ca89b21a059b4c81831c786f1e095145efd21696fb3b910&=&format=webp&quality=lossless&width=364&height=435" alt="" />
+					</div>
+					<div>
+						<img src="https://media.discordapp.net/attachments/1147887838495522978/1242096636625158225/image.png?ex=664c9823&is=664b46a3&hm=1eff16fedbf63343df722b3197331e37a36fad6d4c2b8165949a5fa7356c81bf&=&format=webp&quality=lossless&width=364&height=435" alt="" />
+					</div>
+					<div>
+						<img src="https://media.discordapp.net/attachments/1147887838495522978/1242097765656301689/image.png?ex=664c9930&is=664b47b0&hm=8c97ddbfa77bbe01530be61359adf82c26d9a01b84e8f5da4c1a8c9bcbdb9dd9&=&format=webp&quality=lossless&width=364&height=435" alt="" />
+					</div>
+					<div>
+						<img src="https://media.discordapp.net/attachments/1147887838495522978/1242099570716966922/image.png?ex=664c9ade&is=664b495e&hm=fae7a9ee198d59c9adae6ea68ba5d6385732a188cf78fd9bed8b5694f991b58d&=&format=webp&quality=lossless&width=364&height=435" alt="" />
+					</div>
+					<div>
+						<img src="https://media.discordapp.net/attachments/1147887838495522978/1242099620440445019/image.png?ex=664c9aea&is=664b496a&hm=8c5b9a7fdc94f9c2de403426eaf49ad804f18c8bb2b21c8cf3b17071f2202e09&=&format=webp&quality=lossless&width=364&height=435" alt="" />
+					</div>
+					<div>
+						<img src="https://media.discordapp.net/attachments/1147887838495522978/1242102052549824632/image.png?ex=664c9d2e&is=664b4bae&hm=fd3bcc56b4d8f3edc63f2c3e3f8eab77323d7c2198eac206889c6ef4a24356db&=&format=webp&quality=lossless&width=387&height=435" alt="" />
+					</div>
+					<div>
+						<img src="https://media.discordapp.net/attachments/1147887838495522978/1242102072241950740/image.png?ex=664c9d33&is=664b4bb3&hm=00d449ebfee801339abf32228fb7489146b2d4f2cca9727c05e112a59541a0ba&=&format=webp&quality=lossless&width=364&height=435" alt="" />
+					</div>
+					<div>
+						<img src="https://media.discordapp.net/attachments/1147887838495522978/1242103562650259526/image.png?ex=664c9e96&is=664b4d16&hm=2e20e19aa31a216c3db20d0749e2ab9d069e4666cf9ec5cf43e8d19167d53793&=&format=webp&quality=lossless&width=382&height=434" alt="" />
+					</div>
+					<div>
+						<img src="https://media.discordapp.net/attachments/1147887838495522978/1242103581004402778/image.png?ex=664c9e9a&is=664b4d1a&hm=22ceb61a35f987847a9201a381d28cd3b011fe6ffb51edfa615cba2383c1b1b3&=&format=webp&quality=lossless&width=364&height=435" alt="" />
+					</div>
+					<div>
+						<img src="https://media.discordapp.net/attachments/1147887838495522978/1242109217742131261/image.png?ex=664ca3da&is=664b525a&hm=9bff65ad543f1281d8f6f833638f02826997d99b831904b9b67d4744f46a443d&=&format=webp&quality=lossless&width=364&height=435" alt="" />
+					</div>
+					<div>
+						<img src="https://media.discordapp.net/attachments/1147887838495522978/1242109218203635722/image.png?ex=664ca3da&is=664b525a&hm=76df15e93b772417c5092502198c2f2fa0aeaa7b081c638d51e16780e41abd5e&=&format=webp&quality=lossless&width=377&height=435" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-content">
+			<p>The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software. Today it's seen all around the web; on templates, websites, and stock designs. Use our generator to get your own, or read on for the authoritative history of lorem ipsum.</p>
+			<div class="button-container">
+				<a href="#" class="transparent-button">Twitter</a>
+				<a href="#" class="transparent-button">Telegram</a>
+				<a href="#" class="transparent-button">Pump.fun</a>
+			</div>
+		</div>
+
+        <script type="text/javascript">
+			$(function() {
+				var $mybook 		= $('#mybook');
+				var $bttn_next		= $('#next_page_button');
+				var $bttn_prev		= $('#prev_page_button');
+				var $loading		= $('#loading');
+				var $mybook_images	= $mybook.find('img');
+				var cnt_images		= $mybook_images.length;
+				var loaded			= 0;
+				 
+				$mybook_images.each(function(){
+					var $img 	= $(this);
+					var source	= $img.attr('src');
+					$('<img/>').load(function(){
+						++loaded;
+						if(loaded == cnt_images){
+							$loading.hide();
+							$bttn_next.show();
+							$bttn_prev.show();
+							$mybook.show().booklet({
+								name:               null,                            //  
+								width:              800,                             //  
+								height:             500,                             //   
+								speed:              600,                             //  
+								direction:          'LTR',                           //  
+								                           //  
+								next:               $bttn_next,          			//  
+								prev:               $bttn_prev,          			//  
+								                       
+							});
+							Cufon.refresh();
+						}
+					}).attr('src',source);
+				});
+				
+			});
+        </script>
+ <script>
+	const spans = document.querySelectorAll('.main-heading span');
+
+	spans.forEach((span, idx) => {
+		span.addEventListener('click', (e) => {
+			e.target.classList.add('active');
+		});
+		span.addEventListener('animationend', (e) => {
+			e.target.classList.remove('active');
+		});
+
+		// Initial animation
+		setTimeout(() => {
+			span.classList.add('active');
+		}, 750 * (idx + 1));
+	});
+</script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+	particlesJS('particles-js', {
+  "particles": {
+    "number": {
+      "value": 99,
+      "density": {
+        "enable": true,
+        "value_area": 1420.4657549380909
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 3
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 0,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+</script>
+    </body>
+ 
+</html>
